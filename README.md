@@ -86,7 +86,7 @@ id=nothing_phone2_wifi_fix
 name=Nothing Phone 2 - WiFi Fix
 version=v1.1
 versionCode=2
-author=Claude+User
+author=PNSoniX with ClaudeAI
 description=Fixes WiFi on Nothing Phone 2 - repairs persist/wlan and loads QCA6490 driver on boot
 PROP
 ```

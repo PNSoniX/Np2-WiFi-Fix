@@ -67,6 +67,8 @@ This Magisk module runs a boot script that:
 2. Open **Magisk** → **Modules** → **Install from storage**
 3. Select the ZIP file
 4. Reboot
+5. wait 60s
+6. First Time you have to activate WiFi manually in Settings
 
 ### Option B — Manual install via Termux (no ZIP needed)
 
@@ -160,7 +162,7 @@ Then reboot.
 
 ## 🔍 Verify it worked
 
-After reboot, check the log:
+After reboot, check the log (must bee root):
 
 ```bash
 cat /data/adb/modules/nothing_phone2_wifi_fix/wifi_fix.log

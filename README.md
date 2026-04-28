@@ -152,6 +152,7 @@ for i in $(seq 1 15); do
     fi
 done
 echo "[$(date)] ERROR: wlan0 not found" >> $LOGFILE
+SH
 ```
 
 Then reboot.

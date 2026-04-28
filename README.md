@@ -160,7 +160,7 @@ Then reboot.
 
 ## 🔍 Verify it worked
 
-After reboot, check the log (must bee root):
+After reboot, check the log. Must be root (su):
 
 ```bash
 cat /data/adb/modules/nothing_phone2_wifi_fix/wifi_fix.log

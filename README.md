@@ -155,7 +155,7 @@ echo "[$(date)] ERROR: wlan0 not found" >> $LOGFILE
 SH
 ```
 
-Then reboot.
+Then reboot. (there can be a Crash after first boot with module, just wait for reboot)
 
 ---
 

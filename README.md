@@ -68,9 +68,6 @@ This Magisk module runs a boot script that:
 3. Select the ZIP file
 4. Reboot
 
-<!-- Replace with your own screenshot -->
-![Magisk Installation](assets/magisk_install.png)
-
 ### Option B — Manual install via Termux (no ZIP needed)
 
 Open Termux and run as root (`su`):
@@ -198,9 +195,6 @@ nothing-phone2-wifi-fix/
 │   └── com/google/android/
 │       ├── update-binary
 │       └── updater-script
-├── assets/              # Screenshots for README
-│   ├── banner.png
-│   └── magisk_install.png
 └── README.md
 ```
 

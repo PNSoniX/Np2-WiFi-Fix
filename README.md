@@ -152,8 +152,6 @@ for i in $(seq 1 15); do
     fi
 done
 echo "[$(date)] ERROR: wlan0 not found" >> $LOGFILE
-EOF
-chmod 755 /data/adb/modules/nothing_phone2_wifi_fix/service.sh
 ```
 
 Then reboot.

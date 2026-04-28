@@ -2,16 +2,19 @@
 LOGFILE=/data/adb/modules/nothing_phone2_wifi_fix/wifi_fix.log
 echo "[$(date)] WiFi fix service started" > $LOGFILE
 
-# Warte bis cnss2 bereit ist (max 60 Sekunden)
 CNSS_DEVICE="b0000000.qcom,cnss-qca6490"
 CNSS_PATH="/sys/bus/platform/drivers/cnss2"
 
-echo "[$(date)] Waiting for cnss2 to be ready..." >> $LOGFILE
+# Warte bis das Device im Platform-Bus erscheint (max 60 Sekunden)
+echo "[$(date)] Waiting for cnss2 device node..." >> $LOGFILE
 for i in $(seq 1 30); do
     sleep 2
-    if [ -e "/sys/bus/platform/drivers/cnss2" ]; then
-        echo "[$(date)] cnss2 ready after ${i}x2s" >> $LOGFILE
+    if [ -e "$CNSS_PATH/$CNSS_DEVICE" ]; then
+        echo "[$(date)] cnss2 device found after ${i}x2s" >> $LOGFILE
         break
+    fi
+    if [ $i -eq 30 ]; then
+        echo "[$(date)] Timeout waiting for cnss2 device, trying manual bind..." >> $LOGFILE
     fi
 done
 
@@ -29,14 +32,10 @@ fi
 
 if [ ! -e "$CNSS_PATH/$CNSS_DEVICE" ]; then
     echo "[$(date)] Binding cnss2..." >> $LOGFILE
-    for i in $(seq 1 10); do
-        echo "$CNSS_DEVICE" > "$CNSS_PATH/bind" 2>> $LOGFILE
-        sleep 2
-        if [ -e "$CNSS_PATH/$CNSS_DEVICE" ]; then
-            echo "[$(date)] cnss2 bound after ${i} attempts" >> $LOGFILE
-            break
-        fi
-    done
+    echo "$CNSS_DEVICE" > "$CNSS_PATH/bind" 2>> $LOGFILE
+    sleep 3
+else
+    echo "[$(date)] cnss2 already bound" >> $LOGFILE
 fi
 
 echo "[$(date)] Loading wlan driver..." >> $LOGFILE

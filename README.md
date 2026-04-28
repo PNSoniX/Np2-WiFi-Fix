@@ -210,8 +210,6 @@ nothing-phone2-wifi-fix/
 
 Found a bug or have an improvement? PRs are welcome!
 
-If this also affects **Nothing Phone 1** or **CMF Phone 1**, please open an issue with your `dmesg` output and device info.
-
 ---
 
 ## 📄 License
@@ -222,7 +220,7 @@ MIT License — see [LICENSE](LICENSE) for details.
 
 <div align="center">
 
-Discovered & fixed with ❤️ and a lot of `dmesg | grep` by a user and Claude.
+Discovered & fixed with ❤️ and a lot of `dmesg | grep` by a PNSoniX and Claude.
 
 *WiFi is a human right.*
 

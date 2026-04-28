@@ -228,7 +228,7 @@ MIT License — see [LICENSE](LICENSE) for details.
 
 <div align="center">
 
-Discovered & fixed with ❤️ and a lot of `dmesg | grep` by a PNSoniX and Claude.
+Discovered & fixed with ❤️ and a lot of `dmesg | grep` by PNSoniX and Claude.
 
 *WiFi is a human right.*
 

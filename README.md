@@ -66,7 +66,7 @@ This Magisk module runs a boot script that:
 1. Download the latest ZIP from [Releases](../../releases)
 2. Open **Magisk** → **Modules** → **Install from storage**
 3. Select the ZIP file
-4. Reboot (there can be a Crash after first boot with module, just wait for reboot)
+4. Reboot (there can be Crashdumps after boot with Module, just wait)
 5. wait 60s
 6. First Time you have to activate WiFi manually in Settings
 
@@ -155,7 +155,7 @@ echo "[$(date)] ERROR: wlan0 not found" >> $LOGFILE
 SH
 ```
 
-Then reboot. (there can be a Crash after first boot with module, just wait for reboot)
+Then reboot. (there can be Crashdumps after boot with Module, just wait)
 
 ---
 
